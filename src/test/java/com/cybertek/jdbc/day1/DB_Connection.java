@@ -34,6 +34,7 @@ public class DB_Connection {
         //ResulSet object is what we use to store the actual result we get from query
         ResultSet rs = stmnt.executeQuery("SELECT * FROM REGIONS") ;
 
+
         rs.next(); // Currently we are at the very first row
 
         // Getting the column data we use multiple get methods available in ResultSet

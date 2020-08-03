@@ -1,4 +1,4 @@
-package com.cybertek.jdbc.day1;
+package com.cybertek.jdbc;
 import java.sql.*;
 
 public class Main {
