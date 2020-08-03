@@ -34,6 +34,19 @@ public class DB_Connection {
         //ResulSet object is what we use to store the actual result we get from query
         ResultSet rs = stmnt.executeQuery("SELECT * FROM REGIONS") ;
 
+        rs.next(); // Currently we are at the very first row
+
+        // Getting the column data we use multiple get methods available in ResultSet
+        //Print out region ID and region name, both as String
+        System.out.println("First column value using index: " + rs.getString(1));
+        System.out.println("First column value column_name: " + rs.getString("REGION_ID"));
+
+        //printing out second column data
+        System.out.println("Second column value using index: " + rs.getString(2));
+        System.out.println("Scond column value column_name: " + rs.getString("REGION_NAME"));
+
+
+
 
         System.out.println("THE END");
 
