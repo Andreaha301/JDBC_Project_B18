@@ -27,8 +27,35 @@ public class MovingForwardAndBackWardWithResult {
         rs.next(); // Row 2
         System.out.println( rs.getString("COUNTRY_ID") + " " + rs.getString("COUNTRY_NAME"));
 
+        //How do I go back to previous row
         rs.previous(); // using previous, we go back to row 1, since we were in row 2
         System.out.println( rs.getString("COUNTRY_ID") + " " + rs.getString("COUNTRY_NAME"));
+
+        //Moving the cursor freely between rows
+        // We will get Exception ResultSet.next was not called bc we were in first row already
+        /*rs.previous();
+        System.out.println( rs.getString("COUNTRY_ID") + " " + rs.getString("COUNTRY_NAME"));
+
+         */
+
+        // Moving to the last row directly
+        rs.last();
+        System.out.println( rs.getString("COUNTRY_ID") + " " + rs.getString("COUNTRY_NAME"));
+
+        //Moving to the first row
+        rs.first();
+        System.out.println( rs.getString("COUNTRY_ID") + " " + rs.getString("COUNTRY_NAME"));
+
+        //This will move the cursor directly to the 5th row - By using rs.absolute(5);
+        rs.absolute(5);
+        System.out.println( rs.getString("COUNTRY_ID") + " " + rs.getString("COUNTRY_NAME"));
+
+        //How to move to before first row location
+        rs.beforeFirst();
+
+        //How to move to after last row location
+        rs.afterLast();
+
 
 
 
